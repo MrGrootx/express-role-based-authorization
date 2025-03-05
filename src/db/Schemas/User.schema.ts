@@ -1,8 +1,9 @@
-import { Model, model, Schema } from "mongoose";
+import { model, Schema } from "mongoose";
 
-enum UserRole {
+export enum UserRole {
   Admin = "admin",
   User = "user",
+  Mod = 'mod'
 }
 
 interface User {

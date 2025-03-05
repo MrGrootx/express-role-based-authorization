@@ -1,4 +1,5 @@
 import { body } from "express-validator";
+import { UserRole } from "../db/Schemas/User.schema";
 
 const validateUser = [
   body("email")
@@ -9,7 +10,7 @@ const validateUser = [
     .isLength({ min: 6 })
     .withMessage("Password must be at least 6 characters long"),
   body("role")
-    .isIn(["admin", "user"])
+    .isIn(Object.values(UserRole))
     .withMessage("Role must be either 'admin' or 'user'"),
 ];
 
