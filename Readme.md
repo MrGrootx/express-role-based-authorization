@@ -27,7 +27,11 @@ cd express-role-based-authorization
 # Install dependencies
 pnpm install
 
-# Create a .env file and add your configuration
+# Copy environment file and configure it
+cp .env.example .env
+nano .env  # Edit the file to add your configuration
+
+# Example .env file
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
